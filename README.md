@@ -1,2 +1,2 @@
-# 80like
-一款80后喜欢的应用
+# forever
+my app forever
