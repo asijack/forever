@@ -39,7 +39,7 @@ res/drawable/ 目录下放的是位图文件（.png、.9.png、.jpg、.gif）或
 res/mipmap/ 目录下放的是不同密度的启动图标，所以 res/mipmap/ 只用于存放启动图标，其余图片资源文件都应该放到 res/drawable/ 目录下。</br>
 命名规则：``[类型{_模块名}_逻辑名称、类型{_模块名}_颜色``]。</br>
 例如：btn_main_about.png	主页关于按键 类型_模块名_逻辑名称</br>
->>注意：使用 Android Studio 的插件 SelectorChapek 可以快速生成 selector，前提是命名要规范。
+>注意：使用 Android Studio 的插件 SelectorChapek 可以快速生成 selector，前提是命名要规范。
 
 ## 4.布局资源文件（layout/）
 命名规则：``[类型_模块名、类型{_模块名}_逻辑名称``]。</br>
