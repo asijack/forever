@@ -54,16 +54,23 @@ values/ 资源文件下的文件都以 s 结尾，</br>
 >比如:可以有多个 style 文件，如 styles.xml、styles_home.xml、styles_item_details.xml、styles_forms.xml。
 
 ## 6.colors.xml
-<color> 的 name 命名使用下划线命名法，在你的 colors.xml 文件中应该只是映射颜色的名称一个 ARGB 值，而没有其它的。</br>
+color的 name 命名使用下划线命名法，在你的 colors.xml 文件中应该只是映射颜色的名称一个 ARGB 值，而没有其它的。</br>
 不要使用它为不同的按钮来定义 ARGB 值。</br>
-不建议：<color name="button_foreground">#FFFFFF</color>
-正确做法： <color name="white"     >#FFFFFF</color>
+```java
+//不建议：
+<color name="button_foreground">#FFFFFF</color>
+//正确做法： 
+<color name="white"     >#FFFFFF</color>
+```
 
 ## 7.dimens.xml
-好的做法： <dimen name="font_22">22sp</dimen>
+```java
+//好的做法： 
+<dimen name="font_22">22sp</dimen>
+```
 
 ## 8.strings.xml
-<string> 的 name 命名使用下划线命名法.</br>
+string 的 name 命名使用下划线命名法.</br>
 采用以下规则：``[{模块名_}逻辑名称``]，这样方便同一个界面的所有 string 都放到一起，方便查找。</br>
 例如：main_menu_about	主菜单按键文字
 
