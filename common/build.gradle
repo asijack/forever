@@ -1,0 +1,22 @@
+apply plugin: 'com.android.library'
+apply from:rootProject.file('script/libbase.gradle')
+
+kapt {
+    arguments {
+        arg(arouter_module_name, project.getName())
+    }
+}
+
+dependencies {
+    api dependence.libSupport
+//    api dependence.libConstraintLayout
+    api dependence.libStatusBar
+    api dependence.libArouter
+    api dependence.libGlide
+//    api dependence.libLRecyclerView
+    api dependence.libRecyclerview
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
+}

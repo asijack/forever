@@ -1,2 +1,5 @@
+include ':video'
+include ':common'
+include ':provider'
 include ':forever'
 include ':app'

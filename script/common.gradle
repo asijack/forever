@@ -1,0 +1,61 @@
+//第三方依赖库和版本号管理
+def versions = [:]
+versions.supportLibrary = "1.2.0"
+versions.constraintlayout = "2.0.4"
+versions.status_bar = "3.0.0-beta03"
+versions.glide = "4.9.0"
+versions.arouter_api = "1.5.0"
+versions.arouter_compiler_version = "1.2.2"
+versions.LRecyclerView = "1.5.0"
+
+ext {
+    arouter_compiler_version = versions.arouter_compiler_version
+
+    android = [compileSdkVersion: 29,
+               buildToolsVersion: '29.0.3',
+               applicationId    : 'com.asijack.forever',
+               minSdkVersion    : 19,
+               targetSdkVersion : 29,
+               versionCode      : 1,
+               versionName      : '1.1.0',
+               multiDexEnabled  : true]
+
+    signConfigs = ['storeFile'    : 'sign.jks',
+                   'storePassword': '123456',
+                   'keyAlias'     : 'sign',
+                   'keyPassword'  : '123456']
+
+    java = ['javaVersion': JavaVersion.VERSION_1_8]
+
+
+    dependence = ['libSupport'                : "androidx.appcompat:appcompat:$versions.supportLibrary",
+//                  'libOkhttp'                   : "com.squareup.okhttp3:okhttp:$versions.okhttp3",
+//                  'libKotlinJre7'               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin_stdlib_jdk7",
+//                  'libRetrofit'                 : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+//                  'libRetrofitConvert'          : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+//                  'libRetrofitAdapter'          : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+//                  'libokhttp3LoggingInterceptor': "com.squareup.okhttp3:logging-interceptor:$versions.okhttp3",
+//                  'libRxkotlin'                 : "io.reactivex:rxkotlin:$versions.rxkotlin",
+//                  'libRxlifecycle2'             : "com.trello.rxlifecycle2:rxlifecycle-kotlin:$versions.rxlifecycle_kotlin",
+                  'libGlide'                    : "com.github.bumptech.glide:glide:$versions.glide",
+                  'libStatusBar'               : "com.gyf.immersionbar:immersionbar:$versions.status_bar",
+                  'libRecyclerview'             : "androidx.recyclerview:recyclerview:1.1.0",
+//                  'libBottomBar'                : "com.roughike:bottom-bar:$versions.bottom_bar",
+                  'libLRecyclerView'            : "com.github.jdsjlzx:LRecyclerView:$versions.LRecyclerView",
+//                  'libOkgo'                     : "com.lzy.net:okgo:$versions.okgo",
+//                  'libLJsoup'                   : "org.jsoup:jsoup:$versions.jsoup",
+//                  'libBanner'                   : "com.youth.banner:banner:$versions.banner",
+//                  'libPermission'               : "com.github.hotchemi:permissionsdispatcher:${versions.permissionsdispatcher}",
+                  'libArouter'                  : "com.alibaba:arouter-api:$versions.arouter_api",
+//                  'libQSVideoPlayer'            : "com.github.tohodog:QSVideoPlayer:$versions.QSVideoPlayer",
+//                  'libFlexbox'                  : "com.google.android:flexbox:$versions.flexbox",
+//                  'libAnkoSqlite'               : "org.jetbrains.anko:anko-sqlite:$versions.anko_sqlite",
+//                  'libCircleImageView'          : "de.hdodenhof:circleimageview:$versions.circleimageview",
+//                  'libLogger'                   : "com.orhanobut:logger:$versions.logger",
+//                  'libRhinoAndroid'             : "io.apisense:rhino-android:$versions.rhino_android",
+//                  'libBugly'                    : "com.tencent.bugly:crashreport:$versions.bugly",
+                  'libConstraintlayout'     : "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
+    ]
+
+}
+
