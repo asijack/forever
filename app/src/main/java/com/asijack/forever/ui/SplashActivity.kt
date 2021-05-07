@@ -9,7 +9,8 @@ import com.asijack.common.ui.activity.BaseActivity
 import com.asijack.forever.R
 
 /**
- * @description：app-启动页面
+ * @author xinzhengjie
+ * @date 2021/3/20 15:50
  */
 class SplashActivity : BaseActivity() {
 

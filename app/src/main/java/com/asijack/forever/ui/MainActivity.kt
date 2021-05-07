@@ -10,7 +10,8 @@ import com.asijack.forever.R
 import java.util.*
 
 /**
- * @description：app-主页面
+ * @author xinzhengjie
+ * @date 2021/3/20 15:50
  */
 class MainActivity : BaseActivity() {
 
@@ -36,7 +37,6 @@ class MainActivity : BaseActivity() {
     }
 
     override fun initData() {
-//        UpdateManager.instance.checkVersion(this)
     }
 
     override fun setListener() {

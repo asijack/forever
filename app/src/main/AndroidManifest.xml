@@ -12,7 +12,7 @@
         <activity
             android:name=".ui.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Forever">
+            android:theme="@style/Theme.Forever.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,8 +24,8 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Forever"
-            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+            android:theme="@style/Theme.Forever.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
     </application>
 
 </manifest>

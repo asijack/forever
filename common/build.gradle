@@ -9,14 +9,13 @@ kapt {
 
 dependencies {
     api dependence.libSupport
-//    api dependence.libConstraintLayout
+    api dependence.libConstraintLayout
     api dependence.libStatusBar
     api dependence.libArouter
     api dependence.libGlide
-//    api dependence.libLRecyclerView
+    api dependence.libOkhttp
     api dependence.libRecyclerview
 
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-
+    api project(':skin')
     kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
 }

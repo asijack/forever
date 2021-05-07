@@ -1,0 +1,5 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from:rootProject.file('script/libbase.gradle')

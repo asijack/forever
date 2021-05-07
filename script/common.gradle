@@ -8,6 +8,12 @@ versions.arouter_api = "1.5.0"
 versions.arouter_compiler_version = "1.2.2"
 versions.LRecyclerView = "1.5.0"
 
+versions.rxjava = "2.6.0"
+versions.rx_android = "2.0.1"
+versions.retrofit = "2.6.0"
+versions.okhttp3 = "4.0.1"
+versions.gson = "2.8.5"
+
 ext {
     arouter_compiler_version = versions.arouter_compiler_version
 
@@ -29,7 +35,7 @@ ext {
 
 
     dependence = ['libSupport'                : "androidx.appcompat:appcompat:$versions.supportLibrary",
-//                  'libOkhttp'                   : "com.squareup.okhttp3:okhttp:$versions.okhttp3",
+                  'libOkhttp'                   : "com.squareup.okhttp3:okhttp:$versions.okhttp3",
 //                  'libKotlinJre7'               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin_stdlib_jdk7",
 //                  'libRetrofit'                 : "com.squareup.retrofit2:retrofit:$versions.retrofit",
 //                  'libRetrofitConvert'          : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
@@ -54,7 +60,7 @@ ext {
 //                  'libLogger'                   : "com.orhanobut:logger:$versions.logger",
 //                  'libRhinoAndroid'             : "io.apisense:rhino-android:$versions.rhino_android",
 //                  'libBugly'                    : "com.tencent.bugly:crashreport:$versions.bugly",
-                  'libConstraintlayout'     : "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
+                  'libConstraintLayout'     : "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
     ]
 
 }

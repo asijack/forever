@@ -1,3 +1,4 @@
+include ':skin'
 include ':video'
 include ':common'
 include ':provider'

@@ -1,0 +1,94 @@
+<resources>
+
+    <!--黑色系-->
+    <!--一级标题-->
+    <style name="as_theme_text_title_level1">
+        <item name="android:textColor">@color/as_theme_text_title</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!--二级标题-->
+    <style name="as_theme_text_title_level2" parent="as_theme_text_title_level1">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--三级标题-->
+    <style name="as_theme_text_title_level3" parent="as_theme_text_title_level1">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--重要信息/文字按钮-->
+    <style name="as_theme_text_import_info">
+        <item name="android:textColor">@color/as_theme_text_common</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--主要文本-->
+    <style name="as_theme_text_major_info">
+        <item name="android:textColor">@color/as_theme_text_common</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--次要文本-->
+    <style name="as_theme_text_minor_info">
+        <item name="android:textColor">@color/as_theme_text_assistant</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--辅助文本-->
+    <style name="as_theme_text_assistant_info">
+        <item name="android:textColor">@color/as_theme_text_assistant</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+
+
+
+    <!--白色系-->
+    <!--一级标题-->
+    <style name="as_theme_text_title_level1_white">
+        <item name="android:textColor">@color/as_theme_text_title_white</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!--二级标题-->
+    <style name="as_theme_text_title_level2_white" parent="as_theme_text_title_level1">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--三级标题-->
+    <style name="as_theme_text_title_level3_white" parent="as_theme_text_title_level1">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--重要信息/文字按钮-->
+    <style name="as_theme_text_import_info_white">
+        <item name="android:textColor">@color/as_theme_text_common_white</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--主要文本-->
+    <style name="as_theme_text_major_info_white">
+        <item name="android:textColor">@color/as_theme_text_common_white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--次要文本-->
+    <style name="as_theme_text_minor_info_white">
+        <item name="android:textColor">@color/as_theme_text_assistant_white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--辅助文本-->
+    <style name="as_theme_text_assistant_info_white">
+        <item name="android:textColor">@color/as_theme_text_assistant_white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+</resources>
