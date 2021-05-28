@@ -1,22 +1,13 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
-
-apply from: rootProject.file('script/releaseinfo.gradle')
 apply from: rootProject.file('script/libbase.gradle')
-
-kapt {
-    arguments {
-        arg(arouter_module_name, project.getName())
-    }
-}
+apply from: rootProject.file('script/releaseinfo.gradle')
 
 android {
+    def keystorePath = rootProject.ext.signConfigs.storeFile
 
     signingConfigs {
         release {//release版的签名配置信息
-            storeFile file(rootProject.ext.signConfigs.storeFile)
+            storeFile file(keystorePath)
             storePassword rootProject.ext.signConfigs.storePassword
             keyAlias rootProject.ext.signConfigs.keyAlias
             keyPassword rootProject.ext.signConfigs.keyPassword
@@ -59,10 +50,49 @@ android {
                 }
             }
     }
+    
+    viewBinding {
+        enabled = true
+    }
+
+//    flavorDimensions "zone", "channel"
+//    productFlavors {
+//        neutral {
+//            applicationId "com.guardingvisionpro.convergence"
+//            keystorePath = "../keystory/guarding_vision_pro"
+//            dimension "zone"
+//        }
+//
+//        base {
+//            keystorePath = "../keystory/iVMS-4500_Key"
+//            dimension "zone"
+//        }
+//
+//        google {
+//            dimension "channel"
+//        }
+//        huawei {
+//            dimension "channel"
+//        }
+//        samsung {
+//            dimension "channel"
+//        }
+//        xiaomi {
+//            dimension "channel"
+//        }
+//        oppo {
+//            dimension "channel"
+//        }
+//        vivo {
+//            dimension "channel"
+//        }
+//        other {
+//            dimension "channel"
+//        }
+//    }
 }
 
 dependencies {
     api project(':provider')
-    kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 }

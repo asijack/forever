@@ -1,12 +1,6 @@
 apply plugin: 'com.android.library'
 apply from:rootProject.file('script/libbase.gradle')
 
-kapt {
-    arguments {
-        arg(arouter_module_name, project.getName())
-    }
-}
-
 dependencies {
     api dependence.libSupport
     api dependence.libConstraintLayout
@@ -15,7 +9,7 @@ dependencies {
     api dependence.libGlide
     api dependence.libOkhttp
     api dependence.libRecyclerview
+    api dependence.libBottomBar
 
     api project(':skin')
-    kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
 }

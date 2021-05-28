@@ -1,12 +1,7 @@
 apply plugin: 'com.android.library'
 apply from:rootProject.file('script/libbase.gradle')
 
-kapt {
-    arguments {
-        arg(arouter_module_name, project.getName())
-    }
-}
+
 
 dependencies {
-    kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
 }

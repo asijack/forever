@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        icon="@drawable/app_tab_bottom_home"
+        id="@+id/tab_home"
+        title="首页" />
+</tabs>

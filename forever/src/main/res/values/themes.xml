@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.Forever" parent="Theme.MaterialComponents.Light" />
+</resources>

@@ -1,5 +1,12 @@
 <resources>
+    <!--common-->
     <string name="common_welcome">欢迎</string>
     <string name="common_empty">无数据</string>
     <string name="common_network_error">网络不可用，请检查网络</string>
+    <string name="common_exit_app">再按一次退出程序</string>
+
+    <!--app-->
+    <string name="app_bottom_bar_home">主页</string>
+    <string name="app_bottom_bar_play">直播</string>
+    <string name="app_bottom_bar_me">我的</string>
 </resources>

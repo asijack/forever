@@ -2,47 +2,24 @@ package com.asijack.forever.ui
 
 import android.content.Intent
 import android.os.Build
+import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
 import androidx.annotation.RequiresApi
+import com.asijack.common.mvvm.BindingActivity
 import com.asijack.common.ui.activity.BaseActivity
 import com.asijack.forever.R
+import com.asijack.forever.databinding.AppActivitySplashBinding
 
 /**
  * @author xinzhengjie
  * @date 2021/3/20 15:50
  */
-class SplashActivity : BaseActivity() {
+class SplashActivity : BindingActivity<AppActivitySplashBinding>() {
 
     companion object {
         private const val TIME_COUNTDOWN: Long = 3 * 1000
     }
-
-    override fun isSetPaddingTop(): Boolean = false
-
-    override fun initView() {}
-
-    override fun initData() {
-        //开启倒计时
-        object : CountDownTimer(1000, TIME_COUNTDOWN) {
-            @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-            override fun onFinish() {
-                val intent = Intent(this@SplashActivity, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-
-            override fun onTick(p0: Long) {
-            }
-
-        }.start()
-    }
-
-    override fun initOperate() {
-        hideBottomUIMenu()
-    }
-
-    override fun getLayoutId(): Int = R.layout.app_activity_splash
 
     /**
      * 隐藏底部虚拟键并全屏
@@ -64,4 +41,25 @@ class SplashActivity : BaseActivity() {
         }
     }
 
+    override fun onCreateBinding(savedInstanceState: Bundle?): AppActivitySplashBinding {
+       return AppActivitySplashBinding.inflate(layoutInflater)
+    }
+
+    override fun AppActivitySplashBinding.onBindingCreated(savedInstanceState: Bundle?) {
+        //开启倒计时
+        object : CountDownTimer(1000, TIME_COUNTDOWN) {
+            @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+            override fun onFinish() {
+                val intent = Intent(this@SplashActivity, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+            override fun onTick(p0: Long) {
+            }
+
+        }.start()
+
+        hideBottomUIMenu()
+    }
 }

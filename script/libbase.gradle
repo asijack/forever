@@ -24,14 +24,79 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
+
+    buildFeatures{
+        viewBinding true
+        dataBinding true
+    }
+
+    /*客户类型：可选，默认基线，0：基线；1：中性；2：区域默认（占位）；3：区域印度*/
+//    flavorDimensions "zone", "channel"
+//    productFlavors {
+//        neutral {
+//            dimension "zone"
+//            buildConfigField "int", "CLIENT_SOURCE", "1"
+//        }
+//
+//        india {
+//            dimension "zone"
+//            buildConfigField "int", "CLIENT_SOURCE", "3"
+//        }
+//
+//        base {
+//            dimension "zone"
+//            buildConfigField "int", "CLIENT_SOURCE", "0"
+//        }
+//
+//        huawei {
+//            dimension "channel"
+//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+//            buildConfigField "int", "APP_CHANNEL_INDEX", "1"
+//        }
+//        vivo {
+//            dimension "channel"
+//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+//            buildConfigField "int", "APP_CHANNEL_INDEX", "2"
+//        }
+//        xiaomi {
+//            dimension "channel"
+//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+//            buildConfigField "int", "APP_CHANNEL_INDEX", "3"
+//        }
+//        oppo {
+//            dimension "channel"
+//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+//            buildConfigField "int", "APP_CHANNEL_INDEX", "4"
+//        }
+//        samsung {
+//            dimension "channel"
+//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+//            buildConfigField "int", "APP_CHANNEL_INDEX", "5"
+//        }
+//        google {
+//            dimension "channel"
+//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+//            buildConfigField "int", "APP_CHANNEL_INDEX", "6"
+//        }
+//        other {
+//            dimension "channel"
+//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+//            buildConfigField "int", "APP_CHANNEL_INDEX", "-1"
+//        }
+//    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.3.0-alpha03'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha03'
+    androidTestImplementation 'androidx.test:runner:1.4.0-alpha05'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0-alpha05'
     implementation 'androidx.multidex:multidex:2.0.1'
 }
 
@@ -41,22 +106,22 @@ repositories {
 
 //监听gradle配置阶段执行完成，可以获取到project下的所有task
 //执行module的 clean :解决Failed to delete \build\.......\classes.jar
-this.project.afterEvaluate { project ->
-    def buildTask1 = project.tasks.getByName('assembleDebug')
-    def buildTask2 = project.tasks.getByName('assembleRelease')
-    def taskClean = project.tasks.findByPath("clean")
-    if (buildTask1 != null) {
-        buildTask1.doFirst {
-            taskClean.onlyIf {
-                true
-            }
-        }
-    }
-    if (buildTask2 != null) {
-        buildTask2.doFirst {
-            taskClean.onlyIf {
-                true
-            }
-        }
-    }
-}
+//this.project.afterEvaluate { project ->
+//    def buildTask1 = project.tasks.getByName('assembleDebug')
+//    def buildTask2 = project.tasks.getByName('assembleRelease')
+//    def taskClean = project.tasks.findByPath("clean")
+//    if (buildTask1 != null) {
+//        buildTask1.doFirst {
+//            taskClean.onlyIf {
+//                true
+//            }
+//        }
+//    }
+//    if (buildTask2 != null) {
+//        buildTask2.doFirst {
+//            taskClean.onlyIf {
+//                true
+//            }
+//        }
+//    }
+//}

@@ -12,12 +12,12 @@
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
-<!--    <com.roughike.bottombar.BottomBar-->
-<!--        android:id="@+id/bottomBar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="@dimen/dp_55"-->
-<!--        app:bb_activeTabColor="@color/app_tab_select"-->
-<!--        app:bb_inActiveTabColor="@color/app_tab_normal"-->
-<!--        app:bb_tabXmlResource="@xml/app_bottombar_tasb" />-->
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        app:bb_activeTabColor="@color/as_theme_p"
+        app:bb_inActiveTabColor="@color/as_theme_color"
+        app:bb_tabXmlResource="@xml/app_bottom_bar_tabs" />
 
 </LinearLayout>

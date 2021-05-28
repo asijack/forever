@@ -7,6 +7,7 @@ versions.glide = "4.9.0"
 versions.arouter_api = "1.5.0"
 versions.arouter_compiler_version = "1.2.2"
 versions.LRecyclerView = "1.5.0"
+versions.bottom_bar = "2.3.1"
 
 versions.rxjava = "2.6.0"
 versions.rx_android = "2.0.1"
@@ -26,10 +27,10 @@ ext {
                versionName      : '1.1.0',
                multiDexEnabled  : true]
 
-    signConfigs = ['storeFile'    : 'sign.jks',
-                   'storePassword': '123456',
-                   'keyAlias'     : 'sign',
-                   'keyPassword'  : '123456']
+    signConfigs = ['storeFile'    : '../keystory/iVMS-4500_Key',
+                   'storePassword': 'noisivkih',
+                   'keyAlias'     : 'a',
+                   'keyPassword'  : 'noisivkih']
 
     java = ['javaVersion': JavaVersion.VERSION_1_8]
 
@@ -46,7 +47,7 @@ ext {
                   'libGlide'                    : "com.github.bumptech.glide:glide:$versions.glide",
                   'libStatusBar'               : "com.gyf.immersionbar:immersionbar:$versions.status_bar",
                   'libRecyclerview'             : "androidx.recyclerview:recyclerview:1.1.0",
-//                  'libBottomBar'                : "com.roughike:bottom-bar:$versions.bottom_bar",
+                  'libBottomBar'                : "com.roughike:bottom-bar:$versions.bottom_bar",
                   'libLRecyclerView'            : "com.github.jdsjlzx:LRecyclerView:$versions.LRecyclerView",
 //                  'libOkgo'                     : "com.lzy.net:okgo:$versions.okgo",
 //                  'libLJsoup'                   : "org.jsoup:jsoup:$versions.jsoup",

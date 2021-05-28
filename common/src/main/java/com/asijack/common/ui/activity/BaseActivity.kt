@@ -12,7 +12,6 @@ import com.gyf.immersionbar.ImmersionBar
 /**
  * @description：Activity的基类
  */
-@Suppress("DEPRECATION")
 abstract class BaseActivity : AppCompatActivity() {
 
     /** 多状态布局View*/
@@ -20,22 +19,10 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val layoutId = getLayoutId()
-        if (layoutId != -1) {
-            val rootView = LayoutInflater.from(this).inflate(layoutId, null)
-            setContentView(rootView)
-        }
         AppManager.instance.addActivity(this)
         if (isSetStateBar()) {
             setStatusBar()
         }
-        initOperate()
-        if (isSetStateView()) {
-            setStatusLayout()
-        }
-        initView()
-        initData()
-        setListener()
     }
 
     /** 是都设置沉浸式状态来，true：设置，默认为设置*/
@@ -52,21 +39,6 @@ abstract class BaseActivity : AppCompatActivity() {
      */
     open fun isSetStateView(): Boolean = false
 
-    /** 初始化操作，在onCreate中调用*/
-    open fun initOperate() {}
-
-    /** 设置布局id*/
-    abstract fun getLayoutId(): Int
-
-    /**初始化视图*/
-    abstract fun initView()
-
-    /** 初始化数据*/
-    abstract fun initData()
-
-    /** 设置监听 */
-    open fun setListener() {}
-
     /** 显示Loading*/
     fun showLoading() {
         statusView?.showLoading()
@@ -80,7 +52,7 @@ abstract class BaseActivity : AppCompatActivity() {
     /**
      * 设置透明状态栏
      */
-    fun setStatusBar() {
+    private fun setStatusBar() {
         ImmersionBar.with(this)
                 .statusBarDarkFont(true, 0.2f)
                 .navigationBarColor(R.color.as_status_bar_color)
