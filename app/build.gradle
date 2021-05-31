@@ -18,6 +18,12 @@ android {
         applicationId rootProject.ext.android.applicationId
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+
+        lintOptions {
+            abortOnError false
+            checkReleaseBuilds false
+            disable 'MissingTranslation'
+        }
     }
 
     buildTypes {
@@ -33,6 +39,7 @@ android {
         debug {
             signingConfig signingConfigs.release
             buildConfigField("boolean", "LOG_DEBUG", "true")
+            applicationIdSuffix ".debug"
         }
     }
 
@@ -44,7 +51,7 @@ android {
         variant ->
             variant.outputs.all {
                 if (variant.getBuildType().getName() == 'release') {
-                    outputFileName = new File("forever_v" + variant.versionName + "_" +
+                    outputFileName = new File("asijack_V" + variant.versionName + "_" +
                             new Date().format("yyyy-MM-dd_HH", TimeZone.getTimeZone("UTC")) + "_" +
                             variant.getBuildType().getName() + ".apk")
                 }
@@ -55,41 +62,22 @@ android {
         enabled = true
     }
 
-//    flavorDimensions "zone", "channel"
-//    productFlavors {
-//        neutral {
-//            applicationId "com.guardingvisionpro.convergence"
-//            keystorePath = "../keystory/guarding_vision_pro"
-//            dimension "zone"
-//        }
-//
-//        base {
-//            keystorePath = "../keystory/iVMS-4500_Key"
-//            dimension "zone"
-//        }
-//
-//        google {
-//            dimension "channel"
-//        }
-//        huawei {
-//            dimension "channel"
-//        }
-//        samsung {
-//            dimension "channel"
-//        }
-//        xiaomi {
-//            dimension "channel"
-//        }
-//        oppo {
-//            dimension "channel"
-//        }
-//        vivo {
-//            dimension "channel"
-//        }
-//        other {
-//            dimension "channel"
-//        }
-//    }
+    productFlavors {
+        //基线
+        base {
+            keystorePath = "../keystory/base_vision"
+        }
+        //中性
+        neutral {
+            applicationId "com.neutral.forever"
+            keystorePath = "../keystory/neutral_vision"
+        }
+        //印度
+        india{
+            applicationId "com.india.forever"
+            keystorePath = "../keystory/india_vision"
+        }
+    }
 }
 
 dependencies {

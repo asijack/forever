@@ -27,7 +27,7 @@ ext {
                versionName      : '1.1.0',
                multiDexEnabled  : true]
 
-    signConfigs = ['storeFile'    : '../keystory/iVMS-4500_Key',
+    signConfigs = ['storeFile'    : '../keystory/base_vision',
                    'storePassword': 'noisivkih',
                    'keyAlias'     : 'a',
                    'keyPassword'  : 'noisivkih']

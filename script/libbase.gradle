@@ -37,59 +37,59 @@ android {
     }
 
     /*客户类型：可选，默认基线，0：基线；1：中性；2：区域默认（占位）；3：区域印度*/
-//    flavorDimensions "zone", "channel"
-//    productFlavors {
-//        neutral {
-//            dimension "zone"
-//            buildConfigField "int", "CLIENT_SOURCE", "1"
-//        }
-//
-//        india {
-//            dimension "zone"
-//            buildConfigField "int", "CLIENT_SOURCE", "3"
-//        }
-//
-//        base {
-//            dimension "zone"
-//            buildConfigField "int", "CLIENT_SOURCE", "0"
-//        }
-//
-//        huawei {
-//            dimension "channel"
-//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
-//            buildConfigField "int", "APP_CHANNEL_INDEX", "1"
-//        }
-//        vivo {
-//            dimension "channel"
-//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
-//            buildConfigField "int", "APP_CHANNEL_INDEX", "2"
-//        }
-//        xiaomi {
-//            dimension "channel"
-//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
-//            buildConfigField "int", "APP_CHANNEL_INDEX", "3"
-//        }
-//        oppo {
-//            dimension "channel"
-//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
-//            buildConfigField "int", "APP_CHANNEL_INDEX", "4"
-//        }
-//        samsung {
-//            dimension "channel"
-//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
-//            buildConfigField "int", "APP_CHANNEL_INDEX", "5"
-//        }
-//        google {
-//            dimension "channel"
-//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
-//            buildConfigField "int", "APP_CHANNEL_INDEX", "6"
-//        }
-//        other {
-//            dimension "channel"
-//            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
-//            buildConfigField "int", "APP_CHANNEL_INDEX", "-1"
-//        }
-//    }
+    flavorDimensions "zone", "channel"
+    productFlavors {
+        base {
+            dimension "zone"
+            buildConfigField "int", "CLIENT_SOURCE", "0"
+        }
+
+        neutral {
+            dimension "zone"
+            buildConfigField "int", "CLIENT_SOURCE", "1"
+        }
+
+        india {
+            dimension "zone"
+            buildConfigField "int", "CLIENT_SOURCE", "2"
+        }
+
+        huawei {
+            dimension "channel"
+            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+            buildConfigField "int", "APP_CHANNEL_INDEX", "1"
+        }
+        vivo {
+            dimension "channel"
+            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+            buildConfigField "int", "APP_CHANNEL_INDEX", "2"
+        }
+        xiaomi {
+            dimension "channel"
+            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+            buildConfigField "int", "APP_CHANNEL_INDEX", "3"
+        }
+        oppo {
+            dimension "channel"
+            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+            buildConfigField "int", "APP_CHANNEL_INDEX", "4"
+        }
+        samsung {
+            dimension "channel"
+            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+            buildConfigField "int", "APP_CHANNEL_INDEX", "5"
+        }
+        google {
+            dimension "channel"
+            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+            buildConfigField "int", "APP_CHANNEL_INDEX", "6"
+        }
+        other {
+            dimension "channel"
+            buildConfigField "boolean", "SUPPORT_APP_UPDATE", "false"
+            buildConfigField "int", "APP_CHANNEL_INDEX", "-1"
+        }
+    }
 }
 
 dependencies {
